@@ -31,7 +31,7 @@ class Board
         counter += 1
       end
     end
-    counter 
+    counter
   end
 
   def taken?(position)
@@ -42,12 +42,9 @@ class Board
     !(taken?(position))  && (0..9).include?(position.to_i - 1)
   end
 
-  #update updates the cells in the board with the player token according to the input
-  token = "O"
 
   def update(position, token)
     cells[position.to_i - 1] = token
-    display
   end
 
 end
